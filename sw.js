@@ -1,15 +1,15 @@
-const appCache = '01.09-21:28';
+const appCache = '01.09-21:25';
 
 self.addEventListener('install', (e) => {
   skipWaiting();
-  /*e.waitUntil(
+  e.waitUntil(
     (async () => {
       let response = await fetch('./files.json')
       let offlineFiles = await response.json()
       let cache = await caches.open(appCache)
       cache.addAll(offlineFiles)
     })()
-  );*/
+  );
 });
 
 self.addEventListener('activate', (e) => {
@@ -24,7 +24,7 @@ self.addEventListener('activate', (e) => {
 });
 
 self.addEventListener('fetch', (e) => {
-  /*if (e.request.url.includes('files.json')) return;
+  if (e.request.url.includes('files.json')) return;
   let cacheResponse = null;
   let fetchResponse = null;
   e.respondWith(
@@ -34,7 +34,7 @@ self.addEventListener('fetch', (e) => {
       fetchResponse = await addCache(e.request);
       return fetchResponse;
     })()
-  );*/
+  );
 });
 
 async function addCache(request) {
