@@ -233,7 +233,7 @@ button[disabled] {
 
 #logo, #install, #beforeInstall, #afterInstall, .hide {display: none;}
 
-@media screen and (display-mode: browser) {
+/*@media screen and (display-mode: browser) {
   #startBlock > .settings, #loadGame, #newGame {
     display: none;
   }
@@ -293,4 +293,4 @@ button[disabled] {
   }
   #startBlock > .title {line-height: 2.3;}
   #startBlock > .desc {height: 40rem;}
-}
+}*/
