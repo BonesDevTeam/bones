@@ -1,0 +1,73 @@
+#controlBlockGrid {
+  position: absolute;
+  top: calc(100vh - 39rem); left: 0;
+  width: 45rem; height: 35rem;
+  transform: scale(1.15);
+}
+
+#controlBlock {
+  width: 25rem; height: 25rem;
+  display: grid;
+  grid-template-areas:
+    "up right"
+    "left down"
+  ;
+  grid-template-columns: repeat(2, 12rem);
+  grid-template-rows: repeat(2, 12rem);
+  grid-gap: 1rem;
+  background-color: var(--interface300);
+  border: 2rem solid var(--interface300);
+  border-radius: 50%;
+  transform: rotateZ(45deg) scale(1.05);
+}
+#centerParamsBlock {
+  position: absolute;
+  flex-direction: column;
+  transform: rotateZ(-45deg);
+  width: calc(12rem * 0.8); height: calc(12rem * 0.8);
+  margin: 8rem 0 0 8rem;
+}
+#doubloonPoints {
+  font-size: 3em;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: -1rem;
+  user-select: none;
+}
+#doubloonPoints::before {
+  display: inline-block;
+  content: "";
+  width: 4rem; height: 4rem;
+  margin: 0 1rem -1rem 0;
+  background-image: url('../Assets/DamageSheet/Doubloon.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.controlArrow {
+  background-image: url('../Assets/Control/Arrow.png');
+  background-size: cover;
+  //cursor: pointer;
+  user-select: none;
+  outline: none;
+  filter: brightness(10);
+}
+.movementArrow {
+  filter: none;
+}
+#ArrowUp {
+  grid-area: up;
+  transform: rotateZ(-135deg) scale(0.8);
+}
+#ArrowRight {
+  grid-area: right;
+  transform: rotateZ(-45deg) scale(0.8);
+}
+#ArrowDown {
+  grid-area: down;
+  transform: rotateZ(45deg) scale(0.8);
+}
+#ArrowLeft {
+  grid-area: left;
+  transform: rotateZ(135deg) scale(0.8);
+}

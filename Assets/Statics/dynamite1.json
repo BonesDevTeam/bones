@@ -1,0 +1,14 @@
+{
+	"name":"dynamite1",
+	"skins":{"full":"./Assets/Statics/Images/dynamite1.png"},
+	"game":{
+		"className":"Dynamite",
+		"additionalPoints":0,
+		"isFree":true,
+		"isShooting":true,
+		"timer":6,
+		"onTimerOut":{
+			"spawnItem":"DynamiteActivator"
+		}
+	}
+}

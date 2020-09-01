@@ -1,0 +1,23 @@
+{
+  "type":"item",
+  "name":"PlayerKiller",
+  "isShooting":true,
+  "maxCharges":1,
+  "chargesPerGame":1,
+  "attack":{
+    "playerValue":1,
+    "reload":0
+  },
+  "damageTable":{
+    "goal":{
+			"body":1
+    }
+  },
+  "animation":{
+		"shootPlayer":{
+      "splashRange":0.17,
+      "frames":7,
+      "timeForFrame":90
+    }
+  }
+}

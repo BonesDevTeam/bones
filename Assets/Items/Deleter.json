@@ -1,0 +1,8 @@
+{
+  "type":"item",
+  "name":"Deleter",
+  "isDeleting":true,
+  "additionalPoints":0,
+  "maxCharges":1,
+  "chargesPerGame":1
+}

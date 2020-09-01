@@ -1,0 +1,14 @@
+{
+  "type":"item",
+  "name":"Helmet",
+  "title":"Шлем",
+  "description":"Непримечательная шапка.",
+  "isArmor":true,
+  "additionalPoints":1,
+  "maxCharges":1,
+  "chargesPerGame":1,
+  "defuseTable":{
+    "bodyParts":["head"],
+    "values":[1]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name":"oil",
+  "skins":{"full":"./Assets/Statics/Images/oil.png"},
+  "game":{
+    "className":"Oil",
+    "additionalPoints":5,
+    "isFree":true,
+    "isShooting":true,
+    "timer":8,
+    "onTimerOut":{
+      "spawnItem":"Deleter"
+    }
+  }
+}

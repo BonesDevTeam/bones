@@ -1,0 +1,10 @@
+#finishTurnGrid {
+  position: absolute;
+  top: calc(100vh - 20rem); left: calc(50vw - 45rem / 2);
+  width: 45rem; height: 20rem;
+}
+
+#plus99 {
+  position: absolute;
+  top: 3rem; right: 3rem;
+}

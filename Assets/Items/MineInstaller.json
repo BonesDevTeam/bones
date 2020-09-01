@@ -1,0 +1,30 @@
+{
+  "type":"item",
+  "name":"MineInstaller",
+  "title":"Мина",
+  "description":"Не рекомендуется подходить слишком близко, если вы не владелец детонатора. Любуйтесь издалека.",
+  "isSpawning":true,
+  "additionalPoints":2,
+  "maxCharges":1,
+  "chargesPerGame":1,
+	"attack":{
+		"attackRange":1
+  },
+  "spawn":{
+    "static":"mine1",
+    "item":"MineActivator",
+    "reload":0
+  },
+  "animation":{
+    "bullet":{
+      "bulletsCount":1,
+      "reload":0,
+      "timePerCell":100
+    },
+    "spawnEffect":{
+      "splashRange":0.36,
+      "frames":4,
+      "timeForFrame":80
+    }
+  }
+}

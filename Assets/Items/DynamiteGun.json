@@ -1,0 +1,31 @@
+{
+  "type":"item",
+  "name":"DynamiteGun",
+  "title":"Связка динамита",
+  "description":"Вы смотрите на фитиль, но не удается опеределить время его горения... Да и точно прицелится с руки не выйдет.",
+  "isSpawning":true,
+  "additionalPoints":3,
+  "maxCharges":2,
+  "chargesPerGame":3,
+  "spawn":{
+    "static":"dynamite1",
+    "reload":0
+  },
+  "attack":{
+    "radius":3
+  },
+  "animation":{
+    "bullet":{
+      "bulletsCount":1,
+      "reload":0,
+      "timePerCell":130,
+      "frames":6,
+      "timeForFrame":75
+    },
+    "spawnEffect":{
+      "splashRange":0.36,
+      "frames":7,
+      "timeForFrame":80
+    }
+  }
+}

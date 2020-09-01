@@ -1,0 +1,39 @@
+{
+  "type":"item",
+  "name":"MineActivator",
+  "title":"Детонатор",
+  "description":"Как же красиво мигает лампочка. ЖМИ!",
+  "isShooting":true,
+  "isDeleting":true,
+  "additionalPoints":1,
+  "maxCharges":1,
+  "chargesPerGame":1,
+  "attack":{
+    "splashRange":1,
+    "playerValue":1,
+    "minValue":16,
+    "maxValue":25,
+    "subGoalCoef":1,
+    "reload":0
+  },
+  "damageTable":{
+    "goal":{
+      "legs":1
+    },
+    "subGoals":{
+      "legs":1
+    }
+  },
+  "animation":{
+    "bullet":{
+      "bulletsCount":1,
+      "reload":0,
+      "timePerCell":100
+    },
+    "explosion":{
+      "splashRange":1,
+      "frames":7,
+      "timeForFrame":70
+    }
+  }
+}

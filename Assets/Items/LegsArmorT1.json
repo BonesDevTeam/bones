@@ -1,0 +1,14 @@
+{
+  "type":"item",
+  "name":"LegsArmorT1",
+  "title":"Наголенник",
+  "description":"Непримечательные сапоги.",
+  "isArmor":true,
+  "additionalPoints":1,
+  "maxCharges":1,
+  "chargesPerGame":1,
+  "defuseTable":{
+    "bodyParts":["legs"],
+    "values":[1]
+  }
+}

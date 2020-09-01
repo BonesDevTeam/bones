@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bones Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="icon" href="Assets/logo.png">
+    <link rel="apple-touch-icon" href="Assets/logo.png">
+    <meta name="theme-color" content="#071028">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="app.css">
+    <script defer type="module" src="app.js"></script>
+  </head>
+  <body>
+    <div id="gameContainer">
+      <div id="gameMapContainer">
+        <div id="centerField">
+          <div id="mapField"></div>
+          <div id="animationsLayer"></div>
+        </div>
+      </div>
+    </div>
+    <div id="playerInterface">
+      <div id="currentPlayerGrid">
+        <div id="backgroundInterface" class="flexBox">
+          <div id="person" class="imgBodyPart"></div>
+          <div  class="imgBodyPart head"></div>
+          <div  class="imgBodyPart body"></div>
+          <div  class="imgBodyPart arms"></div>
+          <div  class="imgBodyPart legs"></div>
+          <div id="currentPlayer">
+            <div class="bodyPart" id="head"></div>
+            <div class="bodyPart" id="arms">
+              <div class="wound"></div>
+              <div class="wound"></div>
+            </div>
+            <div class="bodyPart" id="body">
+              <div class="wound"></div>
+              <div class="wound"></div>
+            </div>
+            <div class="bodyPart" id="legs">
+              <div class="wound"></div>
+              <div class="wound"></div>
+            </div>
+          </div>
+          <div class="flexBox">
+            <div class="paramBlock flexBox">
+              <div class="flexBox textBox armorParamBlock">
+                <div class="armorLogo headArmorLogo"></div>
+                <br>
+                <div class="armorLogo bodyArmorLogo"></div>
+                <br>
+                <div class="armorLogo armsArmorLogo"></div>
+                <br><div class="armorLogo legsArmorLogo"></div>
+              </div>
+              <div id="movementPoints" class="param"></div>
+              <div id='livesPoints' class="param"></div>
+              <div id="keyPoints" class="param"></div>
+            </div>
+          </div>
+        </div>
+        <div id='bookMarksContainer'>
+          <div class="bookMark" id="paramMark"></div>
+        </div>
+        <div id="infoContainer">
+          <div id="infoBlock"></div>
+          <button id='ofInfoContainer'>Свернуть</button>
+        </div>
+      </div>
+      <div id="enemysListGrid" class="flexBox">
+        <div id="enemysList">
+
+        </div>
+      </div>
+      <div id="controlBlockGrid" class="flexBox">
+        <div id="controlBlock">
+          <div class="controlArrow" id="ArrowUp" tabindex="0" role="button"></div>
+          <div class="controlArrow" id="ArrowRight" tabindex="0" role="button"></div>
+          <div class="controlArrow" id="ArrowDown" tabindex="0" role="button"></div>
+          <div class="controlArrow" id="ArrowLeft" tabindex="0" role="button"></div>
+          <div id="centerParamsBlock" class="flexBox">
+            <div id="doubloonPoints"></div>
+          </div>
+        </div>
+      </div>
+      <div id="inventoryGrid">
+        <div id="inventory">
+          <div class="circleSlot close centerBg" id="cancelSelect" tabindex="0" role="button"></div>
+          <div class="circleSlot invSlot centerBg" tabindex="0" role="button">
+            <p class="chargesCount charges"></p>
+          </div>
+          <div class="circleSlot invSlot centerBg" tabindex="0" role="button">
+            <p class="chargesCount charges"></p>
+            <p class="chargesCount chargesPerGame"></p>
+          </div>
+          <div class="circleSlot invSlot centerBg" tabindex="0" role="button">
+            <p class="chargesCount charges"></p>
+            <p class="chargesCount chargesPerGame"></p>
+          </div>
+          <div class="circleSlot invSlot centerBg" tabindex="0" role="button">
+            <p class="chargesCount charges"></p>
+            <p class="chargesCount chargesPerGame"></p>
+          </div>
+        </div>
+      </div>
+      <div id="finishTurnGrid" class="flexBox">
+        <button id="finishTurn">Завершить ход</button>
+      </div>
+      <!-- <button id="plus99">+99</button> -->
+    </div>
+    <div class="background flexBox">
+      <div id="loadingBlock" class="flexBox popup">
+        <h3 class="popupTitle">Загрузка...</h3>
+      </div>
+    </div>
+    <div id="templates">
+      <template id="loadingBlockTemp">
+        <div class="background flexBox">
+          <div id="loadingBlock" class="flexBox popup">
+            <h3 class="popupTitle">Загрузка...</h3>
+          </div>
+        </div>
+      </template>
+      <template id="startBlockTemp">
+        <div class="background flexBox">
+          <div id="startBlock" class="popup">
+            <div id="logo" class="centerBg"></div>
+            <h1 class="title">Bones Demo</h1>
+            <div class="settings">
+              <div class="mapThumb centerBg"></div>
+              <div id="mapList">
+                <p id="lab" class="mapParamLine selected">Lab</p>
+                <p id="paw" class="mapParamLine">Paw</p>
+                <p id="criss-cross" class="mapParamLine">Criss-cross</p>
+                <p id="frontier" class="mapParamLine">Frontier</p>
+                <p id="criss-cross-doubloon" class="mapParamLine">Criss-cross Doubloon</p>
+                <p id="frontier-doubloon" class="mapParamLine">Frontier Doubloon</p>
+                <p id="arena-doubloon" class="mapParamLine">Arena Doubloon</p>
+              </div>
+              <div id="countBlock" class="flexBox">
+                <h3 id="playersTitle">Игроков:</h3>
+                <h3 class="popupTitle">2</h3>
+                <input name="playersCount" type="range" min="2" max="4" value="4">
+                <h3 class="popupTitle">4</h3>
+              </div>
+            </div>
+            <p class="desc"><br>Приветствуем, уважаемый тестер!<br>
+              Если ты хочешь принять участие в развитии «Bones», тебе достаточно сыграть пару партий и заполнить <a href="https://forms.gle/yJuaNtb6GBDtXF8v8" target="_blank">анкету обратной связи</a>.<br>
+              Бери с собой от одного до трех друзей, выбирай карту и приступай!<br>
+              Рекомендуем перед началом погружения ознакомиться с <a href="./Assets/rules.png">правилами</a>.</p>
+            <button id="loadGame" class="button">Продолжить</button>
+            <button id="newGame" class="button">Новая игра</button>
+            <button id="install" class="button hide">Установить игру</button>
+            <p id="beforeInstall" class="show">Зайдите с помощью приложения, если оно не установлено, то нажмите вверху 3 точки и "Добавить на рабочий стол"</p>
+            <p id="afterInstall" class="hide">Если установки не произошло, то нажмите вверху 3 точки и "Добавить на рабочий стол"</p>
+          </div>
+        </div>
+      </template>
+      <template id="winBlockTemp">
+        <div class="background flexBox">
+          <div id="winBlock" class="flexBox popup">
+            <h3 class="popupTitle">Ты победил!</h3>
+            <button id="return">Дальше</button>
+          </div>
+        </div>
+      </template>
+      <template id="itemScreenTemp">
+        <div class="background flexBox">
+          <div id="itemScreen" class="popup">
+            <h3 class="title"></h3>
+            <div class="imageBlock">
+              <div class="bulb"></div>
+              <div class="image centerBg"></div>
+            </div>
+            <div class="itemParams"></div>
+            <p class="desc"></p>
+            <button id="rej" class="button"></button>
+            <button id="res" class="button"></button>
+          </div>
+        </div>
+      </template>
+    </div>
+  </body>
+</html>

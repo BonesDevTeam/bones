@@ -1,0 +1,30 @@
+{
+  "type":"item",
+  "name":"OilTanker",
+  "title":"Мазутогенератор",
+  "description":"Этот большой генератор нацелен на игроков - он выпускает струи мазута в их сторону. Всё для того, чтобы противник не мог далеко уйти.",
+  "isSpawning":true,
+  "additionalPoints":2,
+  "maxCharges":1,
+  "chargesPerGame":2,
+  "spawn":{
+    "static":"oil",
+    "reload":100
+  },
+  "attack":{
+    "radius":8,
+    "splashRange":1
+  },
+  "animation":{
+    "bullet":{
+      "bulletsCount":2,
+      "reload":200,
+      "timePerCell":85
+    },
+    "oilSplash":{
+      "splashRange":0.86,
+      "frames":0,
+      "timeForFrame":80
+    }
+  }
+}

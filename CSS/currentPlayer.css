@@ -1,0 +1,258 @@
+red {
+  color: red;
+}
+grey {
+  color: grey;
+}
+#currentPlayerGrid {
+  position: absolute;
+  top: 12rem; left: 0;
+  width: 47rem; height: calc(100vh - 60rem);
+  --hueRotate: 265deg;
+  display: flex;
+}
+
+#backgroundInterface {
+  flex-direction: column;
+  background-color: #0c1227bd;
+  border: 1rem solid var(--interface300);
+  padding: 0rem 3.5rem 24rem 3.5rem;
+  margin-left: 5rem;
+  border-radius: 2rem;
+  margin-top: -7rem;
+  position: relative;
+  width: 40rem;
+  height: 45rem;
+}
+#currentPlayer {
+  display: grid;
+  grid-template-areas:
+    "... head ..."
+    "arms arms arms"
+    "... body ..."
+    "... legs ..."
+  ;
+  grid-template-columns: 8rem 10rem 8rem;
+  grid-template-rows: 7rem 0.1rem 16rem 22rem;
+  transform: scale(0.75);
+  margin-bottom: 10rem;
+}
+#person {
+  background-image: url('../Assets/DamageSheet/Person.png');
+  display: block;
+}
+.bodyPart {
+  //border: 0.4rem solid #000000;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.bodyPart.goal {
+  //border: 0.4rem solid #02f3ff;
+  filter: hue-rotate(var(--hueRotate));
+}
+.wound {
+  width: 3rem; height: 3rem;
+  position: relative;
+  visibility: hidden;
+  background-image: url('../Assets/DamageSheet/wound.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: drop-shadow(0 0 1rem #e31d1d);
+}
+.bodyPart.goal .wound {
+  filter: drop-shadow(0 0 1rem #e31d1d) hue-rotate(calc(-1 * var(--hueRotate)));
+}
+.half > .wound:nth-child(1) {
+  visibility: visible;
+}
+.zero > .wound {
+  visibility: visible;
+}
+
+#head {
+  grid-area: head;
+}
+#arms {
+  grid-area: arms;
+  height: 18rem;
+}
+#arms > .wound:nth-child(1) {
+  top: 5rem; left: 4.5rem;
+}
+#arms > .wound:nth-child(2) {
+  top: 4rem; left: 20rem;
+}
+#body {
+  grid-area: body;
+}
+#body > .wound:nth-child(1) {
+  top: 8rem; left: 2rem;
+}
+#body > .wound:nth-child(2) {
+  top: -2rem; left: 7rem;
+}
+#legs {
+  grid-area: legs;
+}
+#legs > .wound:nth-child(1) {
+  top: 3.5rem; left: 1.2rem;
+}
+#legs > .wound:nth-child(2) {
+  top: 3rem; left: 6.5rem;
+}
+.imgBodyPart {
+  display: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20rem;
+  height: 33rem;
+  position: absolute;
+  top: 1rem;
+}
+.head.goal {
+  display: block;
+  background-image: url('../Assets/DamageSheet/head.png');
+}
+.body.goal {
+  display: block;
+  background-image: url('../Assets/DamageSheet/body.png');
+}
+.arms.goal {
+  display: block;
+  background-image: url('../Assets/DamageSheet/arms.png');
+}
+.legs.goal {
+  display: block;
+  background-image: url('../Assets/DamageSheet/legs.png');
+}
+
+
+.paramBlock {
+  height: 8rem;
+  width: 30rem;
+  top: 42.5rem;
+  position: absolute;
+}
+.param {
+  color: #ffffff;
+  font-size: 2.6em;
+  user-select: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 4.5rem;
+  padding-top: 1rem;
+  padding-left: 5.5rem;
+  width: 4rem;
+  white-space: nowrap;
+  position: absolute;
+  }
+#livesPoints {
+  background-image: url('../Assets/DamageSheet/LivesLogo.png');
+  left: 11.5rem;
+  padding-left: 6rem;
+}
+#movementPoints {
+  background-image: url('../Assets/DamageSheet/MpLogo.png');
+  left: 0rem;
+}
+#keyPoints {
+  background-image: url('../Assets/DamageSheet/KeyLogo.png');
+  padding-left: 5rem;
+  margin-left: 0.5rem;
+  left: 21rem;
+}
+
+.armor {
+  left: 20rem;
+}
+#bookMarksContainer {
+  flex-direction: column;
+  width: 7rem;
+  height: 40rem;
+}
+.bookMark {
+  cursor: pointer;
+  outline: none;
+  width: inherit;
+  height: 19rem;
+  background-color: #0f1b3a;
+  border-radius: 0rem 2rem 2rem 0rem;
+  margin-bottom: 0.5rem;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#infoContainer {
+  width: fit-content;
+  display: none;
+}
+#infoBlock {
+  font-size: 2.6em;
+  color: white;
+  text-align: left;
+  line-height: 3rem;
+  background-color: #0f1b3a;
+  border-radius: 0rem 2rem 2rem 0rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3rem 3rem 3rem 3rem;
+  margin-bottom: 1rem;
+}
+#paramMark {
+  background-image: url('../Assets/DamageSheet/Mp.png');
+}
+#armorMark {
+  background-image: url('../Assets/DamageSheet/armorLogo.png');
+}
+.textBox {
+  width: fit-content;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  white-space: nowrap;
+}
+.bodyPartLogo {
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 3.8rem;
+  padding-left: 4.5rem;
+  padding-top: 0.7rem
+}
+#headLogo {
+  background-image: url('../Assets/DamageSheet/HeadLogo.png');
+}
+#bodyLogo {
+  background-image: url('../Assets/DamageSheet/BodyLogo.png');
+}
+#armsLogo {
+  background-image: url('../Assets/DamageSheet/ArmsLogo.png');
+}
+#legsLogo {
+  background-image: url('../Assets/DamageSheet/LegsLogo.png');
+}
+.armorLogo {
+  background-repeat: no-repeat;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-size: contain;
+  padding-left: 3rem;
+}
+.headArmorLogo {
+  background-image: url('../Assets/DamageSheet/armorHeadLogo.png');
+}
+.bodyArmorLogo {
+  background-image: url('../Assets/DamageSheet/ArmorBodyLogo.png');
+}
+.armsArmorLogo {
+  background-image: url('../Assets/DamageSheet/armorArmsLogo.png');
+}
+.legsArmorLogo {
+  background-image: url('../Assets/DamageSheet/armorLegsLogo.png');
+}
+.armorParamBlock {
+  left: 2rem;
+  position: absolute;
+  top: -5rem;
+}

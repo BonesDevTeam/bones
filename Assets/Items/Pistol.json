@@ -1,0 +1,47 @@
+{
+  "type":"item",
+  "name":"Pistol",
+  "title":"Пистоль",
+  "description":"Верное оружия каждого бойца. Но ваши навыки владения позволяют прицелиться только с ближней и средней дистанции.",
+  "isShooting":true,
+  "additionalPoints":1,
+  "maxCharges":3,
+  "attack":{
+    "radius":8,
+    "playerValue":1,
+    "minValue":2,
+    "maxValue":12,
+    "reload":0
+  },
+  "damageTable":{
+    "goal":{
+      "head":2,
+      "body":2,
+      "legs":2,
+      "arms":2,
+      "null":5
+    }
+  },
+  "animation":{
+    "bullet":{
+      "bulletsCount":1,
+      "reload":0,
+      "timePerCell":40
+    },
+    "shootWall":{
+      "splashRange":0.19,
+      "frames":7,
+      "timeForFrame":90
+    },
+    "shootPlayer":{
+      "splashRange":0.17,
+      "frames":7,
+      "timeForFrame":90
+    },
+    "shootMiss": {
+      "splashRange":0.22,
+      "frames":7,
+      "timeForFrame":95
+    }
+  }
+}

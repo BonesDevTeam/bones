@@ -1,0 +1,11 @@
+{
+	"name":"gameOverTimer",
+	"skins":{"full":"./Assets/Statics/Images/gameOverTimer.png"},
+	"game":{
+		"className":"GameOverTimer",
+		"timer":5,
+		"onTimerOut":{
+			"spawnItem":"PlayerKiller"
+		}
+	}
+}

@@ -1,0 +1,14 @@
+{"name":"w3",
+"skins":{
+	"full":"./Assets/Statics/Images/w3Full.png",
+	"half":"./Assets/Statics/Images/w3Half.png",
+	"zero":"./Assets/Statics/Images/w3Zero.png"
+},
+"game":{
+	"className": "Wall",
+	"initHp":16,
+	"isFree":false,
+	"isShooting":false,
+	"state":"full",
+	"additionalPoints":1}
+}

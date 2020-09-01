@@ -1,0 +1,11 @@
+{
+	"name":"doubloonGenerator",
+	"skins":{"full":"./Assets/Statics/Images/chestOpen.png"},
+	"game":{
+		"className": "DoubloonGenerator",
+		"isChest": true,
+		"additionalPoints":0,
+		"tier":5,
+		"isFree":false,
+		"isShooting":true}
+}

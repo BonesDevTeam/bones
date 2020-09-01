@@ -1,0 +1,296 @@
+html {
+  --interface100: #1b3177e0;
+  --interface200: #0c1227e0;
+  --interface300: #071028;
+  --interface800: #adafcc;
+  --interface900: #e2e6f6;
+}
+
+.background {
+  position: fixed;
+  width: 100vw; height: 100vh;
+  top: 0; left: 0;
+  background-image: radial-gradient(circle, rgba(11,18,37,0.6) 20%, rgba(5,16,47,0.83) 100%);
+}
+.popup {
+  width: 75rem; height: 45rem;
+  background-color: aliceblue;
+  border-radius: 2rem;
+  box-shadow: 0 1rem 2rem #0d0c28ba;
+  user-select: none;
+}
+.popup > .title {
+  grid-area: title;
+  font-size: 4.2em;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--interface300);
+}
+.popup > .button {
+  --primary: var(--interface300);
+  --secondary: var(--interface900);
+  margin: 1.5rem 0 2rem 0;
+}
+
+.popupTitle {
+  color: var(--interface300);
+  font-weight: 700;
+  font-size: 3.7em;
+  text-align: center;
+  margin: 2rem;
+}
+
+button {
+  font-weight: 700;
+  font-size: 3em;
+  padding: 2.9rem 4.5rem;
+  margin: 2rem;
+  background-color: var(--interface200);
+  border-radius: 2rem;
+  border: 0.5rem solid var(--interface800);
+  box-shadow: 0rem 0.5rem 0rem var(--interface900);
+  color: #ffffff;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+}
+button[disabled] {
+  cursor: default;
+}
+
+#itemScreen {
+  width: 80rem; height: 64rem;
+  display: grid;
+  grid-template-areas:
+    "... ... ... ..."
+    "... title title ..."
+    "... image params ..."
+    "... ... ... ..."
+    "... desc desc ..."
+    "... ... ... ..."
+    "... rej res ..."
+    "... ... ... ..."
+  ;
+  grid-template-columns: 7rem 33rem 33rem 7rem;
+  grid-template-rows: 4rem 7rem 25rem 1rem 9rem 1rem 14rem 3rem;
+  /*background-color: #fcfdff;*/
+}
+#itemScreen > .imageBlock {
+  grid-area: image;
+}
+#itemScreen > .imageBlock > .bulb {
+  position: absolute;
+  width: 18rem; height: 18rem;
+  background-color: #3e61d0;
+  border-radius: 6rem;
+  filter: blur(2rem);
+  animation: bulb 4s cubic-bezier(.45,.05,.55,.95) infinite alternate;
+}
+@keyframes bulb {
+  0% {transform: translate(0rem, 3.5rem); opacity: 0.2;}
+  100% {transform: translate(7rem, 3.5rem); opacity: 0.35;}
+}
+#itemScreen > .imageBlock > .image {
+  position: absolute;
+  width: 25rem; height: 25rem;
+}
+#itemScreen > .itemParams {
+  grid-area: params;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+#itemScreen > .itemParams > .itemParamLine {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+}
+#itemScreen > .itemParams > .itemParamLine > p:nth-child(odd) {
+  width: 27rem; padding-left: 1rem;
+  font-size: 2.3em;
+  font-weight: 600;
+  line-height: 1.62;
+  border-bottom: 0.3rem solid var(--interface800);
+  background-color: var(--interface900);
+  color: var(--interface300);
+}
+#itemScreen > .itemParams > .itemParamLine > p:nth-child(even) {
+  width: 5rem;
+  font-size: 2.5em;
+  font-weight: 700;
+  line-height: 1.63;
+  text-align: center;
+  background-color: var(--interface800);
+  color: var(--interface300);
+}
+#itemScreen > .desc {
+  grid-area: desc;
+  height: 9rem;
+  font-size: 2.4em;
+  font-weight: 500;
+  color: #000;
+  opacity: 0.8;
+  overflow: hidden;
+}
+#itemScreen > #rej {
+  grid-area: rej;
+  background-color: var(--secondary);
+  color: var(--primary);
+  margin-right: 2rem;
+}
+#itemScreen > #res {
+  grid-area: res;
+  background-color: var(--primary);
+  color: #fff;
+  margin-left: 2rem;
+}
+
+#loadingBlock {
+  width: 100vw; height: 100vh;
+}
+#startBlock {
+  width: 100vw; height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "... ... ... ... ... ..."
+    "... settings ... title title ..."
+    "... settings ... desc desc ..."
+    "... settings ... ... ... ..."
+    "... settings ... load new ..."
+    "... ... ... ... ... ..."
+  ;
+  grid-template-columns: 1fr 45rem 10rem 33rem 33rem 1fr;
+  grid-template-rows: 1fr 7rem 50rem 3rem 14rem 1fr;
+  /*background-color: #fcfdff;*/
+}
+#startBlock > .settings {
+  grid-area: settings;
+  display: flex;
+  flex-direction: column;
+}
+.mapThumb {
+  width: 42rem; height: 28rem;
+  margin: 1rem 1rem 2rem;
+  border-radius: 1rem;
+  border: 0.5rem solid aliceblue;
+  box-shadow: 0 0 0 0.7rem var(--interface100);
+}
+#mapList {
+  height: 28rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden auto;
+  border-radius: 1rem;
+  background-color: var(--interface900);
+  scrollbar-width: none;
+}
+#mapList::-webkit-scrollbar {width: 0; height: 0;}
+.mapParamLine {
+  font-size: 3em;
+  font-weight: 700;
+  padding: 1.3rem 2rem 1.3rem 2rem;
+  color: var(--interface300);
+  border-radius: 1rem;
+}
+.mapParamLine.selected {
+  background-color: var(--interface800);
+}
+#playersTitle {
+  color: var(--interface300);
+  font-weight: 700;
+  text-align: center;
+  font-size: 3rem;
+}
+#countBlock {
+  margin: 3rem 0;
+}
+[name="playersCount"] {
+  width: 16rem;
+}
+
+#startBlock > .desc {
+  grid-area: desc;
+  height: 50rem;
+  font-size: 2.7em;
+  font-weight: 500;
+  color: #000;
+  opacity: 0.8;
+  text-align: justify;
+}
+#startBlock > #loadGame {
+  grid-area: load;
+  background-color: var(--secondary);
+  color: var(--primary);
+  margin-right: 2rem;
+}
+#startBlock > #newGame {
+  grid-area: new;
+  background-color: var(--primary);
+  color: #fff;
+  margin-left: 2rem;
+}
+
+#logo, #install, #beforeInstall, #afterInstall, .hide {display: none;}
+
+@media screen and (display-mode: browser) {
+  #startBlock > .settings, #loadGame, #newGame {
+    display: none;
+  }
+  #logo {
+    display: block;
+    grid-area: logo;
+    background-image: url('../Assets/logo.png');
+    border-radius: 2rem;
+    box-shadow: 0 1rem 2rem #0d0c2833;
+  }
+  #install {
+    grid-area: install;
+    background-color: var(--primary);
+    color: #fff;
+  }
+  #beforeInstall, #afterInstall {
+    grid-area: install;
+    font-size: 2.7em;
+    font-weight: 700;
+    color: #000;
+    opacity: 0.8;
+    text-align: center;
+  }
+  #install.show, #beforeInstall.show, #afterInstall.show, .show {display: block;}
+}
+@media screen and (display-mode: browser) and (orientation: portrait) {
+  #startBlock {
+    grid-template-areas:
+      "... ... ... ... ..."
+      "... ... logo ... ..."
+      "... ... ... ... ..."
+      "... title title title ..."
+      "... desc desc desc ..."
+      "... ... ... ... ..."
+      "... install install install ..."
+      "... ... ... ... ..."
+    ;
+    grid-template-columns: 10rem 1fr 15rem 1fr 10rem;
+    grid-template-rows: 1fr 15rem 4rem 7rem 30rem 3rem 14rem 1fr;
+  }
+  #logo {border-radius: 2.5rem;}
+  #startBlock > .desc {height: 30rem;}
+}
+@media screen and (display-mode: browser) and (orientation: landscape) {
+  #startBlock {
+    grid-template-areas:
+      "... ... ... ..."
+      "... logo title ..."
+      "... ... ... ..."
+      "... desc desc ..."
+      "... ... ... ..."
+      "... install install ..."
+      "... ... ... ..."
+    ;
+    grid-template-columns: 1fr 10rem 45rem 1fr;
+    grid-template-rows: 1fr 10rem 3rem 40rem 3rem 14rem 1fr;
+  }
+  #startBlock > .title {line-height: 2.3;}
+  #startBlock > .desc {height: 40rem;}
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Map Creator</title>
+    <link rel="stylesheet" href="MapCreator.css">
+    <script defer type="module" src="MapCreator.js"></script>
+  </head>
+  <body class="flexBox">
+    <h1>Map Creator</h1>
+    <input type="text" name="fileTitle" placeholder="Название карты">
+    <div class="container">
+      <div id="playersSelect" class="sideBlock">
+        <h2>Выбери игрока, чтобы установить его на карте</h2>
+        <div class="selectField playerCard interactive" data-p="p1">
+          <div class="selectCell p1"></div>
+          <h3>Игрок 1</h3>
+        </div>
+        <div class="selectField playerCard interactive" data-p="p2">
+          <div class="selectCell p2"></div>
+          <h3>Игрок 2</h3>
+        </div>
+        <div class="selectField playerCard interactive" data-p="p3">
+          <div class="selectCell p3"></div>
+          <h3>Игрок 3</h3>
+        </div>
+        <div class="selectField playerCard interactive" data-p="p4">
+          <div class="selectCell p4"></div>
+          <h3>Игрок 4</h3>
+        </div>
+      </div>
+      <div id="mapField"></div>
+      <div id="brushesSelect" class="sideBlock">
+        <h2>Выбери предмет, который будешь ставить на карте</h2>
+        <div class="selectField brush interactive" data-b="0">
+          <div class="selectCell 0"></div>
+          <h3>Резинка</h3>
+        </div>
+        <div class="selectField brush interactive selected" data-b="w1">
+          <div class="selectCell w1"></div>
+          <h3>Ящик</h3>
+        </div>
+        <div class="selectField brush interactive" data-b="w2">
+          <div class="selectCell w2"></div>
+          <h3>Три ящика</h3>
+        </div>
+        <div class="selectField brush interactive" data-b="w3">
+          <div class="selectCell w3"></div>
+          <h3>Бочка</h3>
+        </div>
+        <div class="selectField brush interactive" data-b="ch">
+          <div class="selectCell ch"></div>
+          <h3>Сундук</h3>
+        </div>
+        <div class="selectField brush interactive" data-b="p">
+          <div class="selectCell p"></div>
+          <h3>Портал</h3>
+        </div>
+        <div class="selectField brush interactive" data-b="doubloonGenerator">
+          <div class="selectCell doubloonGenerator"></div>
+          <h3>Дублон генерато</h3>
+        </div>
+      </div>
+    </div>
+    <button id="loadFile" class="interactive">Загрузить карту</button>
+    <a download="map.json" href="#" id="getResult" class="interactive">Получить JSON</a>
+  </body>
+</html>

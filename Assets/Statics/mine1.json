@@ -1,0 +1,10 @@
+{
+	"name":"mine1",
+	"skins":{"full":"./Assets/Statics/Images/mine1.png"},
+	"game":{
+		"className": "Mine",
+		"additionalPoints":1,
+		"isFree":true,
+		"isShooting":true
+	}
+}
