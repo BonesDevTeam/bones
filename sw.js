@@ -1,4 +1,4 @@
-const appCache = '01.09-19:17';
+const appCache = '01.09-21:28';
 
 self.addEventListener('install', (e) => {
   skipWaiting();
@@ -24,6 +24,7 @@ self.addEventListener('activate', (e) => {
 });
 
 self.addEventListener('fetch', (e) => {
+  if (e.request.url.includes('files.json')) return;
   let cacheResponse = null;
   let fetchResponse = null;
   e.respondWith(
