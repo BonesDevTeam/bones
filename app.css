@@ -92,8 +92,8 @@ body, h1, h2, h3, p, button {
 
 .cell {
   width: var(--cellSize); height: var(--cellSize);
-  border: 0.1rem solid #a9836d;
-  background-color: #c19683;
+  border: 0.1rem solid #4f2a15;
+  //background-color: #71462e;
   box-sizing: border-box;
   user-select: none;
 }
