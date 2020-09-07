@@ -1,4 +1,4 @@
-const appCache = '07.09-20:15';
+const appCache = '07.09-20:18';
 
 self.addEventListener('install', (e) => {
   skipWaiting();
@@ -7,7 +7,9 @@ self.addEventListener('install', (e) => {
       let response = await fetch('./files.json')
       console.log(response);
       let offlineFiles = await response.json()
+      console.log(offlineFiles);
       let cache = await caches.open(appCache)
+      console.log(cache);
       cache.addAll(offlineFiles)
     })()
   );
