@@ -274,7 +274,7 @@ button[disabled] {
     grid-template-columns: 10rem 1fr 15rem 1fr 10rem;
     grid-template-rows: 1fr 15rem 4rem 7rem 30rem 3rem 14rem 1fr;
   }
-  #logo {border-radius: 2.5rem;}
+  #logo {border-radius: 3rem;}
   #startBlock > .desc {height: 30rem;}
 }
 @media screen and (display-mode: browser) and (orientation: landscape) {
