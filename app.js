@@ -14,8 +14,10 @@ if ('serviceWorker' in navigator && caches) {
 
 (async () => {
   let response = await fetch('./last-seen.json')
-  let offlineFiles = await response.json()
-  for (let file of offlineFiles) { fetch(file) }
+  if (response.ok) {
+    let offlineFiles = await response.json()
+    for (let file of offlineFiles) { fetch(file) }
+  }
 
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault()
