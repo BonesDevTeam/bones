@@ -2,10 +2,6 @@ import FileManager from './Controller/FileManager.js'
 import MapManager from './Controller/MapManager.js'
 import Render from './Viewer/Render.js'
 import Game from './Controller/Game.js'
-// Model imports:
-import Player from './Model/Player.js'
-import Pistol from './Model/Pistol.js'
-import Medkit from './Model/Medkit.js'
 // Mechanic imports:
 import moving from './Mechanics/Moving.js'
 import nextMove from './Mechanics/NextMove.js'
@@ -17,6 +13,10 @@ if ('serviceWorker' in navigator && caches) {
 };
 
 (async () => {
+  let response = await fetch('./last-seen-files.json')
+  let offlineFiles = await response.json()
+  for (let file of offlineFiles) { fetch(file) }
+
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault()
     window.appInstallEvent = e
@@ -34,10 +34,6 @@ if ('serviceWorker' in navigator && caches) {
         }, 50)
       })
     })
-  })
-
-  window.addEventListener('appinstalled', (e) => {
-    console.log(e);
   })
 
   document.documentElement.addEventListener('click', (e) => {
