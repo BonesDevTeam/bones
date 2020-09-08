@@ -19,6 +19,8 @@ if ('serviceWorker' in navigator && caches) {
     for (let file of offlineFiles) { fetch(file) }
   }
 
+  Render.startBlock()
+
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault()
     window.appInstallEvent = e
@@ -44,8 +46,6 @@ if ('serviceWorker' in navigator && caches) {
     e.target.classList.add('selected')
     document.querySelector('.mapThumb').style.backgroundImage = `url(./Assets/Maps/Thumbnails/${e.target.id}.png)`
   })
-
-  Render.startBlock()
 
   document.documentElement.addEventListener('click', (e) => {
     if (e.target.id != 'return') return;
