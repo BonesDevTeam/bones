@@ -6,7 +6,7 @@ self.addEventListener('install', (e) => {
     (async () => {
       let cache = await caches.open(appCache)
       let response = await fetch('./files.json')
-      cache.put(new Request('./last-seen-files.json'), response.clone())
+      cache.put(new Request('./last-seen.json'), response.clone())
       let offlineFiles = await response.json()
       for (let file of offlineFiles) {
         cache.add(file)

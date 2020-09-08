@@ -13,7 +13,7 @@ if ('serviceWorker' in navigator && caches) {
 };
 
 (async () => {
-  let response = await fetch('./last-seen-files.json')
+  let response = await fetch('./last-seen.json')
   let offlineFiles = await response.json()
   for (let file of offlineFiles) { fetch(file) }
 
