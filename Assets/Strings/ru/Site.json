@@ -3,7 +3,7 @@
   "GAME_NAME": "Bones Game",
   "OPEN_GAME_BUTTON": "Открыть игру",
   "DOWNLOAD_BUTTON": "Скачать игру",
-  "NOT_AVAILABLE_TEXT": "Пока что игра доступна для скачивания только на Android устройста",
-  "QR_LINK_TEXT": "Отсканируйте QR-код вашим Android смартфоном, чтобы установаить игру",
-  "TELEGRAM": "Подпишись на наш Telegram"
+  "NOT_AVAILABLE_TEXT": "Пока что игра доступна для скачивания только на Android устройстаx.",
+  "QR_LINK_TEXT": "Отсканируйте QR-код Android устройством, чтобы установаить игру.",
+  "TELEGRAM": "Подпишитесь в Telegram"
 }

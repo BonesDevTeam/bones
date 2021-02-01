@@ -22,6 +22,7 @@ export default class PopupRender {
   static main() {
     text('#name', Str.Site.GAME_NAME)
     text('#telegram', Str.Site.TELEGRAM)
+    setHandlers({ elem: qs('#telegram'), handler: () => {} })
   }
 
   static async download() {
