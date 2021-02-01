@@ -22,19 +22,23 @@ export default class PopupRender {
   static main() {
     text('#name', Str.Site.GAME_NAME)
     text('#telegram', Str.Site.TELEGRAM)
-    setHandlers({ elem: qs('#telegram'), handler: () => {} })
+    //setHandlers({ elem: qs('#telegram'), handler: () => {} })
   }
 
   static async download() {
     this.template('download')
+    text('#message', Str.Site.DOWNLOAD_TEXT)
     text('#open', Str.Site.OPEN_GAME_BUTTON)
     text('#download', Str.Site.DOWNLOAD_BUTTON)
-    setHandlers({ elem: qs('#open'), handler: () => {} })
+    //setHandlers({ elem: qs('#open'), handler: () => {} })
     let actual = await fetch('../actual.json')
     actual = actual.json()
-    setHandlers({ elem: qs('#download'), handler: () => {
+    /*setHandlers({ elem: qs('#download'), handler: () => {
       qs('#download').href = `/Download/${actual.version}.apk`
-    } })
+    } })*/
+    qs('#download').addEventListener('click', function () {
+      this.href = `./Download/${actual.version}.apk`
+    })
   }
 
   static notAvailable() {

@@ -107,7 +107,7 @@ button, .button {
   /*cursor: pointer;*/
   outline: none;
 }
-a.button { text-decoration: none; }
+a.button { text-decoration: none; cursor: default; }
 button[disabled] {
   cursor: default;
   opacity: 0.8;
@@ -139,10 +139,7 @@ button.small, .button.small {
   border-radius: var(--bigRadius);
   background-color: var(--interface900);
 }
-
-#open {
-  margin: 4rem;
-}
+#telegram, #open { margin: 2rem; }
 
 #icon, #qrCode {
   border-radius: var(--smallRadius);
