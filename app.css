@@ -1,20 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
 @import "./CSS/interface.css";
-@import "./CSS/inventory.css";
-@import "./CSS/currentPlayer.css";
-@import "./CSS/controlBlock.css";
-@import "./CSS/finishTurn.css";
 
 html {
-  font-size: 1.035vmin;
-  --cellSize: 6rem;
+  font-size: 1.085vmin;
+  background-color: var(--interface300);
 }
-body, #gameContainer {
-  width: 100vw; height: 100vh;
+body {
+  width: var(--vw100); height: var(--vh100);
   overflow: hidden;
   margin: 0;
+  overscroll-behavior: none !important;
+  user-select: none;
 }
-body, h1, h2, h3, p, button {
+body, h1, h2, h3, h4, p, button {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
 }
@@ -27,113 +25,4 @@ body, h1, h2, h3, p, button {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-
-#gameContainer {
-  overflow: scroll;
-  scrollbar-width: none;
-}
-#gameContainer::-webkit-scrollbar {width: 0; height: 0;}
-#gameMapContainer {
-  width: 300rem; height: 200rem;
-  background-size: cover;
-  display: grid;
-  grid-template-areas:
-    "... ... ..."
-    "... mapField ..."
-    "... ... ..."
-  ;
-  grid-template-columns: 60rem 180rem 60rem;
-  grid-template-rows: 40rem 120rem 40rem;
-  background-color: #2646f0;
-}
-
-#centerField {
-  grid-area: mapField;
-}
-#mapField {
-  //background-color: #71462e;
-  display: flex;
-  flex-wrap: wrap;
-  user-select: none;
-}
-#animationsLayer {
-  position: relative;
-  width: 180rem;
-  height: 120rem;
-  margin-top: -120rem;
-  left: 0;
-  visibility: hidden;
-}
-
-.bullet {
-  position: absolute;
-  width: calc(var(--cellSize) * 1.5); height: var(--cellSize);
-  background-size: cover;
-  --x: 0; --y: 0; --rotate: 0deg;
-  transform: translate(calc(var(--x) * 6rem), calc(var(--y) * 6rem))
-             rotateZ(var(--rotate));
-  transform-origin: 33% center;
-  transition-property: transform;
-  transition-timing-function: linear /*cubic-bezier(.21,.57,.41,.8)*/;
-}
-.reaction {
-  position: absolute;
-  --size: 1;
-  width: calc(var(--cellSize) * var(--size));
-  height: calc(var(--cellSize) * var(--size));
-  background-size: cover;
-}
-
-.goal, .subGoal {
-  cursor: pointer;
-}
-
-.cell {
-  width: var(--cellSize); height: var(--cellSize);
-  border: 0.1rem solid #4f2a15;
-  //background-color: #71462e;
-  box-sizing: border-box;
-  user-select: none;
-}
-.player {
-  width: 6.8rem; height: 6.8rem;
-  background-size: cover;
-  position: relative;
-  margin: -6.9rem -0.9rem;
-}
-
-.cellChild {
-  width: 100%; height: 100%;
-  background-size: cover;
-  box-sizing: border-box;
-  user-select: none;
-}
-.cellChild.current {
-  background-color: #31ee72;
-}
-.cell.goal .cellChild {
-  background-color: #ee4343;
-}
-.cell.subGoal .cellChild {
-  background-color: #ee434380;
-}
-
-
-#p1 {
-  background-image: url('./Assets/Characters/p1.png');
-  //background-color: #3526e3;
-}
-#p2 {
-  background-image: url('./Assets/Characters/p2.png');
-  //background-color: #e33826;
-}
-#p3 {
-  background-image: url('./Assets/Characters/p3.png');
-  //background-color: #24bb20;
-}
-#p4 {
-  background-image: url('./Assets/Characters/p4.png');
-  //background-color: #e8a526;
 }
