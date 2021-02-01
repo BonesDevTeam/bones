@@ -21,16 +21,17 @@ export default class PopupRender {
 
   static main() {
     text('#name', Str.Site.GAME_NAME)
-    text('#telegram', Str.Site.TELEGRAM)
+    text('#telegram', Str.Site.SUBSCRIBE_TELEGRAM)
     //setHandlers({ elem: qs('#telegram'), handler: () => {} })
   }
 
   static async download() {
     this.template('download')
     text('#message', Str.Site.DOWNLOAD_TEXT)
-    text('#hint', Str.Site.OPEN_GAME_TEXT)
+    text('#openText', Str.Site.OPEN_GAME_TEXT)
     text('#open', Str.Site.OPEN_GAME_BUTTON)
     text('#download', Str.Site.DOWNLOAD_BUTTON)
+    text('#downloadTelegram', Str.Site.DOWNLOAD_TELEGRAM_TEXT)
     //setHandlers({ elem: qs('#open'), handler: () => {} })
     //let actual = await fetch('./actual.json')
     //actual = actual.json()
