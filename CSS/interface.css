@@ -134,7 +134,7 @@ button.small {
   width: inherit; height: 20rem;
 }
 #container {
-  width: inherit; height: 80rem;
+  width: inherit; height: 75rem;
   flex-direction: column;
   border-radius: var(--bigRadius);
   background-color: var(--interface800);
@@ -146,10 +146,10 @@ button.small {
 #icon {
   width: 16rem; height: 16rem;
   margin: 2rem 5rem 2rem;
-  background-image: url('./bones/Assets/logo.png');
+  background-image: url('../Assets/logo.png');
 }
 #qsCode {
   width: 50rem; height: 50rem;
   margin: 4rem;
-  background-image: url('./bones/Assets/qr.png');
+  background-image: url('../Assets/qr.png');
 }

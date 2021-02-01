@@ -1,6 +1,6 @@
-import Str from '../../Model/Strings.js'
-import setHandlers from '../../Listeners/SetHandlers.js'
-import { qs, text } from '../../Utils/DOM.js'
+import Str from '../Model/Strings.js'
+import setHandlers from '../Listeners/SetHandlers.js'
+import { qs, text } from '../Utils/DOM.js'
 
 export default class PopupRender {
   static removePopup(elem) {
@@ -21,6 +21,7 @@ export default class PopupRender {
 
   static main() {
     text('#name', Str.Site.GAME_NAME)
+    text('#telegram', Str.Site.TELEGRAM)
   }
 
   static async download() {
