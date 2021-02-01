@@ -84,7 +84,7 @@ export default function detectUser() {
   switch (path) {
     case '/bones':
       page = 'download'; break;
-    case: '/bones/update':
+    case '/bones/update':
       page = 'update'; break;
   }
 
