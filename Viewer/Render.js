@@ -33,8 +33,13 @@ export default class PopupRender {
     text('#download', Str.Site.DOWNLOAD_BUTTON)
     text('#downloadTelegram', Str.Site.DOWNLOAD_TELEGRAM_TEXT)
     //setHandlers({ elem: qs('#open'), handler: () => {} })
-    //let actual = await fetch('./actual.json')
-    //actual = actual.json()
+    try {
+      let actual = await fetch('./actual.json')
+      actual = actual.json()
+      console.log(actual);
+    } catch (err) {
+      console.log(err);
+    }
     /*setHandlers({ elem: qs('#download'), handler: () => {
       qs('#download').href = `/Download/${actual.version}.apk`
     } })*/
