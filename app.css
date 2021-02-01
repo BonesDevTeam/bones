@@ -6,9 +6,7 @@ html {
   background-color: var(--interface300);
 }
 body {
-  width: 100vw;
-  min-height: 94vh;
-  max-height: 100vh;
+  width: 100vw; height: 100vh;
   overflow: hidden;
   margin: 0;
   overscroll-behavior: none !important;
