@@ -35,7 +35,7 @@ export default class PopupRender {
     //setHandlers({ elem: qs('#open'), handler: () => {} })
     try {
       let actual = await fetch('./actual.json')
-      actual = actual.json()
+      actual = await actual.json()
       console.log(actual);
     } catch (err) {
       console.log(err);
