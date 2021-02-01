@@ -8,8 +8,8 @@ html {
   --accentColor: rgb(47, 85, 193);
   --smallRadius: 1rem;
   --bigRadius: 2.2rem;
-  --vw100: calc(100vw - 0px);
-  --vh100: calc(100vh - 1px);
+  --vw100: 100vw;
+  --vh100: 100%;
 }
 
 @media (orientation: landscape) {
@@ -20,7 +20,7 @@ html {
 }
 @media (orientation: portrait) {
   html {
-    --contentWidth: 60rem;
+    --contentWidth: 65rem;
     --contentHeight: 100rem;
   }
 }
@@ -139,17 +139,28 @@ button.small, .button.small {
   border-radius: var(--bigRadius);
   background-color: var(--interface900);
 }
-#telegram, #open { margin: 2rem; }
 
-#icon, #qrCode {
-  border-radius: var(--smallRadius);
-}
 #icon {
   width: 7rem; height: 7rem;
   background-image: url('../Assets/logo.png');
 }
-#qsCode {
+#qrCode {
   width: 20rem; height: 20rem;
   margin: 0 0 5rem;
   background-image: url('../Assets/qr.png');
 }
+#icon, #qrCode {
+  border-radius: var(--smallRadius);
+}
+
+#hint {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin: 6rem 0 2rem;
+  color: var(--interface200);
+}
+#open, #download { text-align: center; }
+#open { width: 29.5rem; margin: 0; }
+#download { width: 30rem; }
+
+#telegram { margin: 3rem; }

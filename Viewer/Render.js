@@ -28,6 +28,7 @@ export default class PopupRender {
   static async download() {
     this.template('download')
     text('#message', Str.Site.DOWNLOAD_TEXT)
+    text('#hint', Str.Site.OPEN_GAME_TEXT)
     text('#open', Str.Site.OPEN_GAME_BUTTON)
     text('#download', Str.Site.DOWNLOAD_BUTTON)
     //setHandlers({ elem: qs('#open'), handler: () => {} })

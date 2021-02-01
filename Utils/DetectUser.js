@@ -27,7 +27,7 @@ export default function detectUser() {
     windows: false,
     linux: false
   }
-  let play = false
+  let page = null
 
   if (navigator.userAgent.match(/Firefox\/([0-9\.]+)(?:\s|$)/)) {
     b.firefox = true
@@ -79,24 +79,29 @@ export default function detectUser() {
     os.linux = true
   }
 
-  if (location.search == '?play' ||
-      location.search.includes('?invite') ) {
-    play = true
+  let path = location.pathname.replace(/\/$/, '')
+
+  switch (path) {
+    case '/bones':
+      page = 'download'; break;
+    case: '/bones/update':
+      page = 'update'; break;
   }
+
   let user = {
     b: null,
     orient: null,
     dt: null,
     dm: null,
     os: null,
-    play: false
+    page: null
   }
   for (let name in b) { if (b[name]) user.b = name }
   for (let name in orient) { if (orient[name]) user.orient = name }
   for (let name in dt) { if (dt[name]) user.dt = name }
   for (let name in dm) { if (dm[name]) user.dm = name }
   for (let name in os) { if (os[name]) user.os = name }
-  if (play) user.play = true
+  user.page = page
 
-  return { b, orient, dt, dm, os, play, user };
+  return { b, orient, dt, dm, os, page, user };
 }

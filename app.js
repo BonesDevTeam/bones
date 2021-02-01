@@ -11,7 +11,9 @@ import { qs } from './Utils/DOM.js'
   Render.main()
 
   if (u.os.android) {
-    Render.download()
+    if (u.page == 'download') {
+      Render.download()
+    }
   } else if (u.os.ios) {
     Render.notAvailable()
   } else {
