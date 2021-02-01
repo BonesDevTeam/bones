@@ -32,7 +32,7 @@ export default class PopupRender {
     text('#open', Str.Site.OPEN_GAME_BUTTON)
     text('#download', Str.Site.DOWNLOAD_BUTTON)
     //setHandlers({ elem: qs('#open'), handler: () => {} })
-    let actual = await fetch('../actual.json')
+    let actual = await fetch('./actual.json')
     actual = actual.json()
     /*setHandlers({ elem: qs('#download'), handler: () => {
       qs('#download').href = `/Download/${actual.version}.apk`
