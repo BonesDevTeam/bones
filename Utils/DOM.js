@@ -3,5 +3,5 @@ export function qs(selector) {
 }
 
 export function text(selector, text) {
-  document.querySelector(selector).textContent = text;
+  qs(selector).textContent = text;
 }
