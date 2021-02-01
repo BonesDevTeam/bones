@@ -8,8 +8,6 @@ html {
   --accentColor: rgb(47, 85, 193);
   --smallRadius: 1rem;
   --bigRadius: 2.2rem;
-  --vw100: 100vw;
-  --vh100: 100%;
 }
 
 @media (orientation: landscape) {
