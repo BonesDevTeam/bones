@@ -24,13 +24,19 @@
 #icon, #qrCode, #updateBanner {
   border-radius: var(--smallRadius);
 }
+.gameBanner {
+  margin-top: 1rem;
+  background-image: url('../Assets/Updates/lab.png');
+}
 
 #descContainer {
-  width: var(--innerWidth); height: 35rem;
-  margin-top: 2.5rem;
+  width: var(--innerWidth);
+  margin-top: 3rem;
   overflow: hidden auto;
 }
-p#description {
+.gameDesc { height: 23rem; }
+.updateDesc { height: 34rem; }
+#descText {
   font-size: 3em;
   word-break: break-word;
   color: var(--interface300);
@@ -42,11 +48,11 @@ p#description {
   color: var(--interface200);
 }
 
-#openText { margin: 6rem 0 2rem; }
+#openText { margin: 2rem; }
 
 #open, #download { text-align: center; }
 #open { min-width: 29.5rem; margin: 0; }
-#downloadTelegram { margin-bottom: 2.5rem; }
 #download { min-width: 30rem; }
+#downloadTelegram { margin-bottom: 3rem; }
 
 #telegram { margin: 3rem; }

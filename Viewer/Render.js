@@ -30,6 +30,7 @@ export default class PopupRender {
     text('#open', Str.Site.OPEN_GAME_BUTTON)
     text('#download', Str.Site.DOWNLOAD_BUTTON)
     text('#downloadTelegram', Str.Site.DOWNLOAD_TELEGRAM_TEXT)
+    text('#descText', Str.Desc.GAME_DESC)
     this.setDownload()
   }
 
@@ -41,7 +42,8 @@ export default class PopupRender {
     actual = await actual.json()
     text('#message', actual.title)
     qs('#updateBanner').style.backgroundImage = `url(${actual.image})`
-    text('#description', actual.text)
+    let desc = `${Str.Site.UPDATE_TEXT + Str.Desc.UPDATE_DESC}`.replace('\n', '<br>')
+    qs('#descText').innerHTML = desc
     this.setDownload(actual)
   }
 
