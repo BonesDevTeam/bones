@@ -19,7 +19,7 @@ html {
 @media (orientation: portrait) {
   html {
     --contentWidth: 65rem;
-    --contentHeight: 100rem;
+    --contentHeight: 120rem;
   }
 }
 
@@ -112,6 +112,7 @@ button, .button {
   box-shadow: 0rem 0.5rem 0rem var(--interface900);
   outline: none;
 }
+a { cursor: default; }
 a.button { text-decoration: none; }
 button[disabled] {
   cursor: default;
@@ -134,7 +135,7 @@ button, .button, .clickable {
   --rotate: 0;
 }
 @media (hover: hover) and (pointer: fine) {
-  button, .button, .clickable, .goal, .subGoal {
+  button, .button, a, .clickable, .goal, .subGoal {
     cursor: pointer;
   }
 }

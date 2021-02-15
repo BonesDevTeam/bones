@@ -25,7 +25,7 @@ export default class PopupRender {
 
   static download() {
     this.template('download')
-    text('#message', Str.Site.DOWNLOAD_TEXT)
+    //text('#message', Str.Site.DOWNLOAD_TEXT)
     text('#openText', Str.Site.OPEN_GAME_TEXT)
     text('#open', Str.Site.OPEN_GAME_BUTTON)
     text('#download', Str.Site.DOWNLOAD_BUTTON)
@@ -41,6 +41,7 @@ export default class PopupRender {
     actual = await actual.json()
     text('#message', actual.title)
     qs('#updateBanner').style.backgroundImage = `url(${actual.image})`
+    text('#description', actual.text)
     this.setDownload(actual)
   }
 
