@@ -42,7 +42,7 @@ export default class PopupRender {
     actual = await actual.json()
     text('#message', actual.title)
     qs('#updateBanner').style.backgroundImage = `url(${actual.image})`
-    let desc = `${Str.Site.UPDATE_TEXT + Str.Desc.UPDATE_DESC}`.replace('\n', '<br>')
+    let desc = `${Str.Site.UPDATE_TEXT + Str.Desc.UPDATE_DESC}`.replace(/\n/g, '<br>')
     qs('#descText').innerHTML = desc
     this.setDownload(actual)
   }
