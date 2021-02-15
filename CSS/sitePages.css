@@ -1,0 +1,39 @@
+#header {
+  width: inherit; height: 15rem;
+}
+#container {
+  width: inherit; height: 70rem;
+  flex-direction: column;
+  border-radius: var(--bigRadius);
+  background-color: var(--interface900);
+}
+
+#icon {
+  width: 7rem; height: 7rem;
+  background-image: url('../Assets/logo.png');
+}
+#qrCode {
+  width: 20rem; height: 20rem;
+  margin: 0 0 5rem;
+  background-image: url('../Assets/qr.png');
+}
+#updateBanner {
+  width: 50rem; height: 15rem;
+}
+#icon, #qrCode, #updateBanner {
+  border-radius: var(--smallRadius);
+}
+
+.hint {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--interface200);
+}
+
+#openText { margin: 6rem 0 2rem; }
+
+#open, #download { text-align: center; }
+#open { width: 29.5rem; margin: 0; }
+#download { width: 30rem; }
+
+#telegram { margin: 3rem; }

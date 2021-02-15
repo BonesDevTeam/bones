@@ -5,8 +5,9 @@
   "OPEN_GAME_TEXT": "Уже установлена?",
   "OPEN_GAME_BUTTON": "Открыть игру",
   "DOWNLOAD_BUTTON": "Установить игру",
+  "UPDATE_BUTTON": "Скачать обновление",
   "DOWNLOAD_TELEGRAM_TEXT": "Или скачать из Telegram",
-  "NOT_AVAILABLE_TEXT": "Пока что игра доступна для скачивания только на Android устройстаx.",
-  "QR_LINK_TEXT": "Отсканируйте QR-код Android устройством, чтобы установить игру.",
-  "SUBSCRIBE_TELEGRAM": "Подпишитесь в Telegram"
+  "NOT_AVAILABLE_TEXT": "Пока что игра доступна для скачивания только на Android устройстаx",
+  "QR_LINK_TEXT": "Отсканируйте QR-код Android устройством, чтобы установить игру",
+  "SUBSCRIBE_TELEGRAM": "Следи за нами в Telegram"
 }

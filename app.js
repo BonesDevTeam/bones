@@ -13,6 +13,8 @@ import { qs } from './Utils/DOM.js'
   if (u.os.android) {
     if (u.page == 'download') {
       Render.download()
+    } else if (u.page == 'update') {
+      Render.update()
     }
   } else if (u.os.ios) {
     Render.notAvailable()

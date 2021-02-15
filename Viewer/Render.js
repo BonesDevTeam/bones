@@ -1,5 +1,4 @@
 import Str from '../Model/Strings.js'
-import setHandlers from '../Listeners/SetHandlers.js'
 import { qs, text } from '../Utils/DOM.js'
 
 export default class PopupRender {
@@ -22,19 +21,34 @@ export default class PopupRender {
   static main() {
     text('#name', Str.Site.GAME_NAME)
     text('#telegram', Str.Site.SUBSCRIBE_TELEGRAM)
-    //setHandlers({ elem: qs('#telegram'), handler: () => {} })
   }
 
-  static async download() {
+  static download() {
     this.template('download')
     text('#message', Str.Site.DOWNLOAD_TEXT)
     text('#openText', Str.Site.OPEN_GAME_TEXT)
     text('#open', Str.Site.OPEN_GAME_BUTTON)
     text('#download', Str.Site.DOWNLOAD_BUTTON)
     text('#downloadTelegram', Str.Site.DOWNLOAD_TELEGRAM_TEXT)
-    //setHandlers({ elem: qs('#open'), handler: () => {} })
+    this.setDownload()
+  }
+
+  static async update() {
+    this.template('update')
+    text('#download', Str.Site.UPDATE_BUTTON)
+    text('#downloadTelegram', Str.Site.DOWNLOAD_TELEGRAM_TEXT)
     let actual = await fetch('./actual.json')
     actual = await actual.json()
+    text('#message', actual.title)
+    qs('#updateBanner').style.backgroundImage = `url(${actual.image})`
+    this.setDownload(actual)
+  }
+
+  static async setDownload(actual) {
+    if (!actual) {
+      actual = await fetch('./actual.json')
+      actual = await actual.json()
+    }
     qs('#download').addEventListener('click', function () {
       this.href = `./Download/${actual.version}.apk`
     })
