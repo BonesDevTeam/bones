@@ -52,7 +52,7 @@ export default class PopupRender {
     text('#message', Str.Site.START_GAME_TITLE)
     text('#descText', Str.Site.START_GAME_TEXT)
     text('#start', Str.Site.START_GAME_BUTTON)
-    qs('#open').href = `bones://start${location.search}`
+    qs('#start').href = `bones://start${location.search}`
     text('#installGame', Str.Site.INSTALL_GAME_TEXT)
   }
 
