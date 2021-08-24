@@ -6,16 +6,12 @@ import { qs } from './Utils/DOM.js'
 
 (async () => {
   await Str.ready()
-  let u = detectUser()
+  const u = detectUser()
   Render.removePopup(qs('#loadingBlock'))
   Render.main()
 
   if (u.os.android) {
-    if (u.page == 'download') {
-      Render.download()
-    } else if (u.page == 'update') {
-      Render.update()
-    }
+    if (u.page) Render[u.page]()
   } else if (u.os.ios) {
     Render.notAvailable()
   } else {

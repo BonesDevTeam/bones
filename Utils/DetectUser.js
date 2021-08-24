@@ -86,6 +86,8 @@ export default function detectUser() {
       page = 'download'; break;
     case '/bones/update':
       page = 'update'; break;
+    case '/bones/start?':
+      page = 'start'; break;
   }
 
   let user = {

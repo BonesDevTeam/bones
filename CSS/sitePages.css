@@ -36,6 +36,7 @@
 }
 .gameDesc { height: 23rem; }
 .updateDesc { height: 34rem; }
+.startDesc { height: 12rem; }
 #descText {
   font-size: 3em;
   word-break: break-word;

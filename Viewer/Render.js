@@ -47,6 +47,15 @@ export default class PopupRender {
     this.setDownload(actual)
   }
 
+  static async start() {
+    this.template('start')
+    text('#message', Str.Site.START_GAME_TITLE)
+    text('#descText', Str.Site.START_GAME_TEXT)
+    text('#open', Str.Site.START_GAME_BUTTON)
+    qs('#open').href = `bones://start${location.search}`
+    text('#installGame', Str.Site.INSTALL_GAME_TEXT)
+  }
+
   static async setDownload(actual) {
     if (!actual) {
       actual = await fetch('./actual.json')

@@ -8,7 +8,12 @@
   "DOWNLOAD_BUTTON": "Установить игру",
   "UPDATE_BUTTON": "Скачать обновление",
   "DOWNLOAD_TELEGRAM_TEXT": "Или скачать из Telegram",
+  "START_GAME_TITLE": "Запуск игры",
+  "START_GAME_TEXT": "Вас пригласили поиграть на выбранной карте в выбранном режиме игры!",
+  "START_GAME_BUTTON": "Начать игру",
+  "INSTALL_GAME_TEXT": "Или установить игру",
+
   "NOT_AVAILABLE_TEXT": "Пока что игра доступна для скачивания только на Android устройстаx",
   "QR_LINK_TEXT": "Отсканируйте QR-код Android устройством, чтобы установить игру",
-  "SUBSCRIBE_TELEGRAM": "Следи за нами в Telegram"
+  "SUBSCRIBE_TELEGRAM": "Следи за Bones в Telegram"
 }
