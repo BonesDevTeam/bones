@@ -21,6 +21,7 @@
 #updateBanner {
   width: var(--innerWidth); height: 19rem;
 }
+#updateBanner.startBanner { height: 38rem; }
 #icon, #qrCode, #updateBanner {
   border-radius: var(--smallRadius);
 }
@@ -48,12 +49,12 @@
   font-weight: 800;
   color: var(--interface200);
 }
+.bottomHint { margin-bottom: 3rem; }
 
 #openText { margin: 2rem; }
 
-#open, #download { text-align: center; }
+#open, #download, #start { text-align: center; }
 #open { min-width: 29.5rem; margin: 0; }
-#download { min-width: 30rem; }
-#downloadTelegram { margin-bottom: 3rem; }
+#download, #start { min-width: 30rem; }
 
 #telegram { margin: 3rem; }
