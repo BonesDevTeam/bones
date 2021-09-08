@@ -1,0 +1,47 @@
+{
+  "lastModified": "07-09-2021-01",
+  "modes": {
+    "solo": [
+      {
+        "name": "RatsHunt",
+        "enable": true,
+        "maps": ["CenterMap", "LabMap", "Together", "Island"]
+      }, {
+        "name": "Storm",
+        "enable": true,
+        "maps": ["Storm1", "FireDance"]
+      }, {
+        "name": "Education",
+        "enable": true,
+        "maps": ["EducationBeginer"]
+      }
+    ],
+    "friends": [
+      {
+        "name": "PVP",
+        "enable": true,
+        "maps": ["CrissCross", "FrontierMap", "LabMap", "PawMap", "CenterMap"]
+      }, {
+        "name": "DoubloonPVP",
+        "enable": true,
+        "maps": ["CrissCrossDoubloon", "FrontierDoubloon", "ArenaDoubloon"]
+      }, {
+        "name": "Education",
+        "enable": true,
+        "maps": ["EducationBeginer"]
+      }
+    ],
+    "test": [
+      {
+        "name": "TestRat",
+        "enable": false,
+        "maps": ["RazerandRats"]
+      },
+      {
+        "name": "TestPVP",
+        "enable": true,
+        "maps": ["TestMap1", "TestMap2", "EmptyMap", "WaterFlood", "Puddles", "BonesFire", "BiggestWaterPool"]
+      }
+    ]
+  }
+}
